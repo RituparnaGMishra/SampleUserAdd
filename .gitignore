@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/SampleUserAdd/.vs/SampleUserAdd
+/SampleUserAdd/SampleUserAdd/obj
+/SampleUserAdd/SampleUserAdd/bin/Debug/net6.0
