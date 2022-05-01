@@ -1,6 +1,9 @@
+using SampleUserAdd.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<IDbService, DbService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -22,6 +25,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=UserEntity}/{action=Create}/{id?}");
+
 
 app.Run();
